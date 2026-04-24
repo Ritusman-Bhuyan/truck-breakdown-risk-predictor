@@ -83,8 +83,8 @@ tire-risk-predictor/
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/tire-risk-predictor.git
-cd tire-risk-predictor
+git clone https://github.com/Ritusman-Bhuyan/truck-breakdown-risk-predictor.git
+cd truck-breakdown-risk-predictor
 ```
 
 ### 2. Install dependencies
@@ -96,7 +96,8 @@ pip install -r requirements.txt
 ### 3. Run the application
 
 ```
-streamlit run app/main.py
+cd app
+streamlit run main.py
 ```
 
 ---
@@ -120,4 +121,4 @@ Live App: (Add your deployed link here after deployment)
 ## 👨‍💻 Author
 
 Ritusman Bhuyan
-GitHub: https://github.com/RitusmanBhuyan
+GitHub: https://github.com/Ritusman-Bhuyan
