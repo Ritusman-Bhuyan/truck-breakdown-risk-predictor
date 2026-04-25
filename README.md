@@ -78,8 +78,6 @@ tire-risk-predictor/
 
 ---
 
-## 🚀 How to Run Locally
-
 ### 1. Clone the repository
 
 ```
@@ -112,11 +110,38 @@ The system predicts a risk probability and categorizes it into:
 
 ---
 
-## 🌐 Deployment
+---
 
-Live App: (Add your deployed link here after deployment)
+## 📈 Model Performance
+
+The system uses separate models for each road type. Performance was evaluated using standard classification metrics:
+
+### 🚛 Dump Roads
+- Precision: 0.71  
+- Recall: 0.95  
+- F1 Score: 0.82  
+
+### 🛣 Surface Roads
+- Precision: 0.76  
+- Recall: 0.98  
+- F1 Score: 0.85  
+
+### ⛏ Inpit Roads
+- Precision: 0.92  
+- Recall: 0.98  
+- F1 Score: 0.95  
+
+### 🏗 Lift Roads
+- Precision: 0.68  
+- Recall: 0.43  
+- F1 Score: 0.53  
 
 ---
+
+### 📌 Key Observations
+- Inpit road model shows **excellent performance (F1 = 0.95)**  
+- Surface and Dump models show **strong recall**, suitable for safety-critical prediction  
+- Lift road model requires improvement due to **low recall**, which may lead to missed failure predictions  
 
 ## 👨‍💻 Author
 
