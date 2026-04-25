@@ -1,24 +1,29 @@
 import streamlit as st
 import numpy as np
 import joblib
+import os
 
 st.set_page_config(page_title="Tire Risk Predictor", page_icon="🚛")
 
 st.title("🚛 Tire Breakdown Risk Predictor")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))   
+
+PROJECT_ROOT = os.path.dirname(BASE_DIR)                 
+
 # Model & Scaler Paths
 model_paths = {
-    "Surface": "../model/Surface_Roads/surface_model.pkl",
-    "Dump": "../model/Dump_Roads/dump_model.pkl",
-    "Inpit": "../model/Inpit_Roads/inpit_model.pkl",
-    "Lift": "../model/Lift_Roads/lift_model.pkl"
+    "Surface": os.path.join(PROJECT_ROOT, "model/Surface_Roads/surface_model.pkl"),
+    "Dump": os.path.join(PROJECT_ROOT, "model/Dump_Roads/dump_model.pkl"),
+    "Inpit": os.path.join(PROJECT_ROOT, "model/Inpit_Roads/inpit_model.pkl"),
+    "Lift": os.path.join(PROJECT_ROOT, "model/Lift_Roads/lift_model.pkl")
 }
 
 scaler_paths = {
-    "Surface": "../model/Surface_Roads/scaler_surface.pkl",
-    "Dump": "../model/Dump_Roads/scaler_dump.pkl",
-    "Inpit": "../model/Inpit_Roads/scaler_inpit.pkl",
-    "Lift": "../model/Lift_Roads/scaler_lift.pkl"
+    "Surface": os.path.join(PROJECT_ROOT, "model/Surface_Roads/scaler_surface.pkl"),
+    "Dump": os.path.join(PROJECT_ROOT, "model/Dump_Roads/scaler_dump.pkl"),
+    "Inpit": os.path.join(PROJECT_ROOT, "model/Inpit_Roads/scaler_inpit.pkl"),
+    "Lift": os.path.join(PROJECT_ROOT, "model/Lift_Roads/scaler_lift.pkl")
 }
 
 @st.cache_resource
